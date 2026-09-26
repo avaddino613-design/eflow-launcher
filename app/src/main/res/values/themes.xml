@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.PageFlowLauncher" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/text_primary</item>
+        <item name="colorPrimaryDark">@color/text_primary</item>
+        <item name="colorAccent">@color/badge_blue_fg</item>
+        <item name="android:windowBackground">@color/bg_screen</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+    </style>
+</resources>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_onboarding_gradient">
+
+    <ProgressBar
+        android:id="@+id/onboardingProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="20dp"
+        android:max="100"
+        android:progressDrawable="@drawable/progress_onboarding" />
+
+    <ViewFlipper
+        android:id="@+id/stepFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="28dp">
+
+        <!-- Step 0: welcome -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <FrameLayout android:layout_width="88dp" android:layout_height="88dp" android:background="@drawable/bg_badge_blue">
+                <ImageView android:layout_width="40dp" android:layout_height="40dp" android:layout_gravity="center" android:src="@drawable/ic_book" app:tint="@color/badge_blue_fg" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="@string/onboarding_welcome_title"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/onboarding_welcome_body"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="16dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/card_stroke"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="18dp">
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center_horizontal">
+                        <FrameLayout android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_badge_green">
+                            <ImageView android:layout_width="18dp" android:layout_height="18dp" android:layout_gravity="center" android:src="@drawable/ic_grid" app:tint="@color/badge_green_fg" />
+                        </FrameLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/nav_apps" android:textSize="11sp" android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center_horizontal">
+                        <FrameLayout android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_badge_blue">
+                            <ImageView android:layout_width="18dp" android:layout_height="18dp" android:layout_gravity="center" android:src="@drawable/ic_book" app:tint="@color/badge_blue_fg" />
+                        </FrameLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/nav_library" android:textSize="11sp" android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center_horizontal">
+                        <FrameLayout android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_badge_yellow">
+                            <ImageView android:layout_width="18dp" android:layout_height="18dp" android:layout_gravity="center" android:src="@drawable/ic_trophy" app:tint="@color/badge_yellow_fg" />
+                        </FrameLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/nav_stats" android:textSize="11sp" android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- Step 1: default launcher -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <FrameLayout android:layout_width="88dp" android:layout_height="88dp" android:background="@drawable/bg_badge_green">
+                <ImageView android:layout_width="40dp" android:layout_height="40dp" android:layout_gravity="center" android:src="@drawable/ic_grid" app:tint="@color/badge_green_fg" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="@string/onboarding_default_title"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/onboarding_default_body"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary" />
+
+            <Button
+                android:id="@+id/setDefaultLauncherButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/bg_primary_button"
+                android:textColor="@color/primary_button_fg"
+                android:paddingHorizontal="22dp"
+                android:text="@string/set_as_default" />
+
+            <TextView
+                android:id="@+id/defaultLauncherStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="13sp"
+                android:textColor="@color/text_tertiary" />
+        </LinearLayout>
+
+        <!-- Step 2: done -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <FrameLayout android:layout_width="88dp" android:layout_height="88dp" android:background="@drawable/bg_badge_yellow">
+                <ImageView android:layout_width="40dp" android:layout_height="40dp" android:layout_gravity="center" android:src="@drawable/ic_trophy" app:tint="@color/badge_yellow_fg" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="@string/onboarding_done_title"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/onboarding_done_body"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+
+    </ViewFlipper>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/skipButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/skip"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary" />
+
+        <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_muted_circle"
+            android:src="@drawable/ic_arrow_left"
+            android:contentDescription="@string/back"
+            app:tint="@color/text_primary" />
+
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_primary_circle"
+            android:src="@drawable/ic_arrow_right"
+            android:contentDescription="@string/next" />
+    </LinearLayout>
+
+</LinearLayout>

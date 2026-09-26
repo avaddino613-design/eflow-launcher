@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base -->
+    <color name="bg_screen">#000000</color>
+    <color name="bg_card">#1C1C1E</color>
+    <color name="card_stroke">#2C2C2E</color>
+    <color name="field_bg">#1C1C1E</color>
+    <color name="divider">#2C2C2E</color>
+
+    <!-- Text -->
+    <color name="text_primary">#F5F5F7</color>
+    <color name="text_secondary">#B5B5BA</color>
+    <color name="text_tertiary">#8A8A90</color>
+
+    <!-- Bottom nav -->
+    <color name="nav_pill_bg">#1C1C1E</color>
+    <color name="nav_active_pill">#FFFFFF</color>
+    <color name="nav_icon_active">#000000</color>
+    <color name="nav_icon_inactive">#8A8A90</color>
+
+    <!-- Buttons / chips -->
+    <color name="primary_button_bg">#FFFFFF</color>
+    <color name="primary_button_fg">#000000</color>
+    <color name="chip_bg_inactive">#1C1C1E</color>
+    <color name="chip_fg_inactive">#B5B5BA</color>
+    <color name="chip_bg_active">#FFFFFF</color>
+    <color name="chip_fg_active">#000000</color>
+
+    <!-- Icon badges (kept vivid in dark mode too, like the reference screenshots) -->
+    <color name="badge_green_bg">#193322</color>
+    <color name="badge_green_fg">#4ADE80</color>
+    <color name="badge_blue_bg">#16233A</color>
+    <color name="badge_blue_fg">#5B9CF6</color>
+    <color name="badge_yellow_bg">#332C12</color>
+    <color name="badge_yellow_fg">#F0C33E</color>
+    <color name="badge_purple_bg">#2A1B3A</color>
+    <color name="badge_purple_fg">#B683ED</color>
+
+    <color name="pdf_badge_bg">#3A1414</color>
+    <color name="pdf_badge_fg">#E27373</color>
+
+    <color name="danger">#D97A7A</color>
+</resources>

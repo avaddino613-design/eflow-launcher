@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+      We deliberately do NOT request QUERY_ALL_PACKAGES. Apps that hold the
+      HOME role (i.e. are set as the default launcher) are automatically
+      exempted by the OS from Android 11+'s package-visibility filtering, so
+      once the user sets PageFlow as their default launcher, PackageManager
+      calls already see every installed app - system apps included - with
+      no extra permission. The <queries> block below is just a fallback for
+      the short window before that role is granted.
+    -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".PageFlowApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PageFlowLauncher">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".onboarding.OnboardingActivity" android:exported="false" />
+        <activity android:name=".apps.AppDrawerActivity" android:exported="false" />
+        <activity android:name=".apps.FavoriteAppsPickerActivity" android:exported="false" />
+        <activity android:name=".library.LibraryActivity" android:exported="false" />
+        <activity android:name=".reader.ReaderActivity" android:exported="false" />
+        <activity android:name=".stats.StatsActivity" android:exported="false" />
+        <activity android:name=".settings.SettingsActivity" android:exported="false" />
+
+    </application>
+</manifest>
